@@ -1,0 +1,44 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'PT Sans', sans-serif;
+}
+
+
+.birthdaycakes,
+.anniversarycakes,
+.customcakes {
+  display: flex;
+  height: 90vh;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+}
+
+.birthdaycakes {
+  background-image: url('/images/Anniversary1.jpg');
+  background-position: center;
+
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.anniversarycakes {
+  background-image: url('/images/Custom8.jpg');
+  background-position: center;
+
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
+
+.customcakes {
+  background-image: url('/images/Custom9.jpg');
+  background-position: center;
+
+  background-repeat: no-repeat;
+  color: #fff;
+  font-size: 100px;
+}
