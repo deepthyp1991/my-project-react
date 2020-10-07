@@ -1,12 +1,6 @@
 import React from 'react';
-
 import './App.css';
-
 import Cards from './components/Cards'
-
-
-
-
 import {BrowserRouter as Router, Switch, Route} from 'react-router-dom'
 import Navbar from './components/Navbar';
 import AnniversaryCake from './components/pages/AnniversaryCake';
@@ -18,13 +12,12 @@ function App() {
   <>
   <Router>
   <Navbar />
-  <Cards />
   <Switch>
-    <Route path ='/' exact />
+  <Route path ='/' exact component ={Cards}/>
    <Route path = '/anniversarycake' component = {AnniversaryCake} />
    <Route path = '/birthdaycake' component = {BirthdayCake} />
    <Route path = '/customcake' component = {CustomCake} />
-
+   
   </Switch>
   </Router>
  
