@@ -1,11 +1,16 @@
 import React from 'react';
 import './Card.css';
 import CardItem from './CardItem';
+import Footer from './Footer'
+import Navbar from './Navbar';
 
 function Cards() {
   return (
+    <div>
+    <Navbar />    
     <div className='cards'>
-      <h1>Check out our home made cakes!</h1>
+      <h1>Welcome to Cake World!</h1>
+      <h3>Check out our home made cakes!</h3>
       <div className='cards__container'>
         <div className='cards__wrapper'>
           <ul className='cards__items'>
@@ -44,9 +49,12 @@ function Cards() {
                text='Vancho'
              />
           </ul>
-        </div>
-      </div>
+        </div> 
+      </div>  
     </div>
+    <Footer />
+    </div>
+    
   );
 }
 
