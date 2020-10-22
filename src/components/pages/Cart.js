@@ -1,5 +1,5 @@
 import React from 'react';
-import './Cart.css'
+
 
 export default function Cart({ cart, setCart }) {
   const getTotalSum = () => {
@@ -30,7 +30,7 @@ export default function Cart({ cart, setCart }) {
           <div className="product" key={idx}>
             <h3>{product.name}</h3>
             <h4>${product.cost}</h4>
-            <input
+            <input 
               value={product.quantity}
               onChange={(e) =>
                 setQuantity(
@@ -39,7 +39,7 @@ export default function Cart({ cart, setCart }) {
                 )
               }
             /><br />
-            <img src={product.image} alt={product.name} />
+            <img  src={product.image} alt={product.name} /><br />
             <button onClick={() => removeFromCart(product)}>
               Remove
             </button>
@@ -47,7 +47,7 @@ export default function Cart({ cart, setCart }) {
         ))}
       </div>
 
-      <div className = 'cart'>Total Cost: ${getTotalSum()}</div>
+      <div className = 'total'>Total Cost: ${Math.round(getTotalSum())}</div>
     </>
   );
 }

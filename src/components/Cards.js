@@ -2,12 +2,12 @@ import React from 'react';
 import './Card.css';
 import CardItem from './CardItem';
 import Footer from './Footer'
-import Navbar from './Navbar';
+// import Navbar from './Navbar';
 
 function Cards() {
   return (
     <div>
-    <Navbar />    
+    {/* <Navbar />     */}
     <div className='cards'>
       <h1>Welcome to Cake World!</h1>
       <h3>Check out our home made cakes!</h3>

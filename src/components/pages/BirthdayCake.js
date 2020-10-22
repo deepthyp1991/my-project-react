@@ -1,19 +1,6 @@
-// import React from 'react'
-// import '../../App.css'
-
-// function BirthdayCake() {
-//     return (
-//         <div>
-//             <h1 className = 'birthdaycakes'>Birthday Cakes</h1>
-//         </div>
-//     )
-// }
-
-// export default BirthdayCake
-
 import React, { useState } from 'react';
 import './Cart.css';
-import Products from './Products';
+import Birthday from './Birthday'
 import Cart from './Cart';
 
 const PAGE_PRODUCTS = 'products';
@@ -36,6 +23,7 @@ function BirthdayCake() {
 
   return (
     <div className="App">
+     
       <header>
         <button onClick={() => navigateTo(PAGE_CART)}>
           Go to Cart ({getCartTotal()})
@@ -46,7 +34,7 @@ function BirthdayCake() {
         </button>
       </header>
       {page === PAGE_PRODUCTS && (
-        <Products cart={cart} setCart={setCart} />
+        <Birthday cart={cart} setCart={setCart} />
       )}
       {page === PAGE_CART && (
         <Cart cart={cart} setCart={setCart} />

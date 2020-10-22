@@ -1,21 +1,7 @@
-// import React from 'react'
-// import '../../App.css'
-
-// function CustomCake() {
-//     return (
-//         <div>
-//             <h1 className = 'customcakes'>Custom Cakes</h1>
-//         </div>
-//     )
-// }
-
-// export default CustomCake
-
 import React, { useState } from 'react';
-// import './Cart.css';
-import '../../App.css'
-import Products from './Products';
 import Cart from './Cart';
+import Custom from './Custom';
+import './Cart.css'
 
 const PAGE_PRODUCTS = 'products';
 const PAGE_CART = 'cart';
@@ -47,7 +33,7 @@ function CustomCake() {
         </button>
       </header>
       {page === PAGE_PRODUCTS && (
-        <Products cart={cart} setCart={setCart} />
+        <Custom cart={cart} setCart={setCart} />
       )}
       {page === PAGE_CART && (
         <Cart cart={cart} setCart={setCart} />

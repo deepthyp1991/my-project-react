@@ -1,34 +1,34 @@
 import React, { useState } from 'react';
 
-const Anniversary_Cakes = 'Anniversary Cakes';
+const Custom_Cakes = 'Custom Cakes';
 
-export default function Products({ setCart, cart }) {
+export default function Custom({ setCart, cart }) {
   const [products] = useState([
     {
-      category: Anniversary_Cakes,
-      name: 'Velvet Cake',
+      category: Custom_Cakes,
+      name: 'Cat Cake',
       cost: 2.99,
       image:
-        'images/Anniversary1.jpg',
+        'images/Custom2.jpg',
     },
     {
-      category:  Anniversary_Cakes,
-      name: 'Choclate Cake',
+      category: Custom_Cakes,
+      name: 'Vancho Cake',
       cost: 19.99,
       image:
-        'images/Anniversary3.jpg',
+        'images/Custom3.jpg',
     },
     {
-     category: Anniversary_Cakes,
-    name: 'Vanilla Cake',
+     category: Custom_Cakes,
+    name: 'Red cream Cake',
      cost: 19.99,
-     image:'images/Anniversary4.jpg',
+     image:'images/Custom4.jpg',
      },
      {
-     category: Anniversary_Cakes,
-    name: 'Strawberry Cake',
+    category: Custom_Cakes,
+    name: 'White Forest Cake',
     cost: 19.99,
-    image:'images/Anniversary5.jpg',
+    image:'images/Custom9.jpg',
       },
   ]);
 
@@ -38,19 +38,19 @@ export default function Products({ setCart, cart }) {
       (item) => product.name === item.name
     );
     if (itemInCart) {
-      itemInCart.quantity= itemInCart.quantity + 1;
+      itemInCart.quantity++;
     } else {
       itemInCart = {
         ...product,
-         quantity: 1,
-   };
+        quantity: 1,
+      };
       newCart.push(itemInCart);
     }
     setCart(newCart);
   };
 
-  const [category] = useState( Anniversary_Cakes);
-  
+  const [category] = useState( Custom_Cakes);
+
   const getProductsInCategory = () => {
     return products.filter(
       (product) => product.category === category
@@ -74,4 +74,3 @@ export default function Products({ setCart, cart }) {
     </>
   );
 }
-
