@@ -1,6 +1,5 @@
 import React from 'react';
 
-
 export default function Cart({ cart, setCart }) {
   const getTotalSum = () => {
     return cart.reduce(
@@ -30,7 +29,7 @@ export default function Cart({ cart, setCart }) {
           <div className="product" key={idx}>
             <h3>{product.name}</h3>
             <h4>${product.cost}</h4>
-            <input 
+            <input
               value={product.quantity}
               onChange={(e) =>
                 setQuantity(
@@ -38,11 +37,11 @@ export default function Cart({ cart, setCart }) {
                   parseInt(e.target.value)
                 )
               }
-            /><br />
+            /> <br />
             <img  src={product.image} alt={product.name} /><br />
-            <button onClick={() => removeFromCart(product)}>
+            <button variant= 'primary' onClick={() => removeFromCart(product)}>
               Remove
-            </button>
+            </button> 
           </div>
         ))}
       </div>
